@@ -1,25 +1,20 @@
-<html>
-<head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-			<div class="container">
 
-            <h1><a href="/">Django Girls Blog</a></h1>
-        
-        <ul class="list-unstyled"> 
+{% extends 'blog/base.html' %}
+{% block content %}
 
-        	{% for post in posts %}
-        	<li>
-        		<div>
-        	<h3>{{ post.title }}</h3>
-        	<p>{{ post.text }}</p>
-        	<p>{{ post.created_date }}</p>
-        		</div>
-
-        	</li>
-        	{% endfor %}
-        </ul>
-    </div>
-</body>
-</html>
+ <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% for post in posts %}
+                    <div class="post">
+                        <div class="date">
+                            {{ post.published_date }}
+                        </div>
+                        <h1><a href="">{{ post.title }}</a></h1>
+                        <p>{{ post.text|linebreaksbr }}</p>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+{% endblock %}
