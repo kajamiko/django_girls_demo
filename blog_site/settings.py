@@ -25,7 +25,7 @@ SECRET_KEY = '3#im4p5a#wy9b=(@f2%*q!x&*ceysfbiv#mvc8+!&5(da$9db%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kajamiko.pythonanywhere.com']
 
 
 # Application definition
