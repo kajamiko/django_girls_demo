@@ -1,2 +1,5 @@
 virt_env/
 .env/
+*.pyc
+*~
+__pycache__
