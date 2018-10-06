@@ -8,9 +8,10 @@ https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/
 """
 
 import os
-
+from dotenv import load_dotenv
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "blog_site.settings")
-
+project_folder = os.path.expanduser('~/Pulpit/django_girls') 
+# os.environ["SECRET_KEY"] = '3#im4p5a#wy9b=(@f2%*q!x&*ceysfbiv#mvc8+!&5(da$9db%'
+load_dotenv(os.path.join(project_folder, '.env'))
 application = get_wsgi_application()
